@@ -4,17 +4,20 @@
  */
 package Ventas;
 
-/**
- *
- * @author javie
- */
+import java.net.URL;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 public class login extends javax.swing.JFrame {
 
-    /**
-     * Creates new form login
-     */
+    String Id="Juan",Contraseña="123";
+    
+    
     public login() {
         initComponents();
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -27,11 +30,11 @@ public class login extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Idin = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        Contraseñain = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,7 +43,7 @@ public class login extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 48)); // NOI18N
         jLabel1.setText("Inicio de Sesión ");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 185, -1));
+        getContentPane().add(Idin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 185, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("USUARIO:");
@@ -49,16 +52,32 @@ public class login extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setText("Contraseña:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 190, 20));
+        getContentPane().add(Contraseñain, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 190, 20));
 
-        jButton2.setText("Entrar");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
+        jLabel5.setText("jLabel5");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 70, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cafed.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+       MenuVentas ventana=new MenuVentas();
+        
+        if(Idin.getText().equals(Id)&&Contraseñain.getText().equals(Contraseña)){
+            ventana.setVisible(true);
+            this.setVisible(false);
+        }
+        
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -96,12 +115,12 @@ public class login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField Contraseñain;
+    private javax.swing.JTextField Idin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }

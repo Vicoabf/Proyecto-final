@@ -43,7 +43,7 @@ public class MenuVentas extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, -1));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cafed.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 0, 860, 540));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 510));
 
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/productojdl.png"))); // NOI18N
         jMenu1.setText("Punto de venta");

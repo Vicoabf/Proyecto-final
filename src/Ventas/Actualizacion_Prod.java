@@ -15,6 +15,8 @@ public class Actualizacion_Prod extends javax.swing.JFrame {
      */
     public Actualizacion_Prod() {
         initComponents();
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -33,8 +35,8 @@ public class Actualizacion_Prod extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
 
@@ -60,21 +62,33 @@ public class Actualizacion_Prod extends javax.swing.JFrame {
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 170, 30));
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 190, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cafed.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 790, 480));
-
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton1.setText("Actualizar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 330, 210, 40));
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cafed.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 480));
+
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/747335dd.png"))); // NOI18N
         jMenu1.setText("Regresar");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        // TODO add your handling code here:
+        login vuelta = new login();
+        vuelta.setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_jMenu1MouseClicked
 
     /**
      * @param args the command line arguments
